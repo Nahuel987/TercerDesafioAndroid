@@ -18,15 +18,17 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView  pregunta,categoria,dificultad;
+        private String primeraCosa, segundaCosa;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         //inicio las vistas
-        iniciarVistas();
+       // iniciarVistas();
         //pregunta.setText("wenaaa");
         //categoria.setText("iiii");
         //dificultad.setText("ooooo");
@@ -38,8 +40,12 @@ public class MainActivity extends AppCompatActivity {
         call.enqueue(new Callback<RespuestaApi>() {
             @Override
             public void onResponse(Call<RespuestaApi> call, Response<RespuestaApi> response) {
-                pregunta.setText(response.body().getResults().get(0).getQuestion());
-                categoria.setText(response.body().getResults().get(0).getQuestion());
+                //paso pregunta
+                primeraCosa=response.body().getResults().get(0).getQuestion();
+                //pasocategoria
+               segundaCosa=response.body().getResults().get(0).getCategory();
+
+                iniciarFagmento(primeraCosa,segundaCosa);
             }
 
             @Override
@@ -50,13 +56,22 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
+
     }//on create
 
-    private void iniciarVistas(){
+    private void iniciarFagmento(String cosa1,String cosa2){
 
-        pregunta=findViewById(R.id.textViewDos);
-        categoria=findViewById(R.id.textViewCuatro);
-        dificultad =findViewById(R.id.textViewSeis);
+        Log.e("ERRORRRRRS","INICIAR_FRAGMENTO");
+        FirstFragment firstFragment=FirstFragment.newInstance(cosa1,cosa2);
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        //.add(firstFragment,"PRIMER_FRAGMENTO")
+                        .add(R.id.frameLayout,firstFragment,"PRIMER_FRAGMENTO")
+                        .commit();
     }
+
+
+
 
 }//class

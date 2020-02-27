@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">DesafioTres</string>
     <string name="pregunta">Pregunta:</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">SEGUNDO FRAGMENTO fragment</string>
 </resources>

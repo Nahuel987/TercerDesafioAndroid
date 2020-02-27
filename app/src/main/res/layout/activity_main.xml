@@ -6,106 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imagenUno"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="105dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="106dp"
-        android:layout_marginBottom="15dp"
-        android:src="@drawable/logo_desafio_latam"
-        app:layout_constraintBottom_toTopOf="@+id/textViewUno"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-    <TextView
-        android:id="@+id/textViewUno"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/pregunta"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenUno" />
 
-    <TextView
-        android:id="@+id/textViewCuatro"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="labelCategoria"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTres" />
-
-    <TextView
-        android:id="@+id/textViewDos"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="labelpregunta"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewUno" />
-
-    <TextView
-        android:id="@+id/textViewTres"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Categoria"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDos" />
-
-    <TextView
-        android:id="@+id/textViewSeis"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="labelDificultad"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCinco" />
-
-    <TextView
-        android:id="@+id/textViewCinco"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Dificultad"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCuatro" />
-
-    <RadioGroup
-        android:layout_width="334dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSeis">
-
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="RadioButton" />
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="RadioButton" />
-    </RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

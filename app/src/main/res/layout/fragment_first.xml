@@ -86,6 +86,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewCuatro" />
 
+    <Button
+        android:id="@+id/botonUno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:text="PasarAlOtroFragmento" />
+
+    <!--
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="334dp"
@@ -95,13 +104,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSeis">
 
-        <Button
-            android:id="@+id/botonUno"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="1dp"
-            android:layout_marginEnd="1dp"
-            android:text="PasarAlOtroFragmento" />
+
 
         <RadioButton
             android:id="@+id/radioButton"
@@ -115,5 +118,18 @@
             android:layout_height="wrap_content"
             android:text="RadioButton" />
     </RadioGroup>
+
+    -->
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSeis" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

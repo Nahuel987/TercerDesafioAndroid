@@ -1,6 +1,8 @@
 package com.example.desafiotres;
 
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -80,6 +82,8 @@ public class FirstFragment extends Fragment {
                     Toast.makeText(getContext(),"HOLAAAAAA",Toast.LENGTH_SHORT).show();
                     pasarAlOtro();
 
+                    shareWithWhatsApp(v);
+
                 }
             });
 
@@ -103,10 +107,36 @@ public class FirstFragment extends Fragment {
         getActivity()
         .getSupportFragmentManager()
                 .beginTransaction()
-                .add(R.id.frameLayout,secondFragment,"SEGUNDO_FRAGMENTO")
+                //.add(R.id.frameLayout,secondFragment,"SEGUNDO_FRAGMENTO")
+                .replace(R.id.frameLayout,secondFragment,"SEGUNDO FRAGMENTO")
+                .addToBackStack("SEGUNDO_FRAGMENTO")
                 .commit();
 
 
     }
+
+    public void shareWithWhatsApp(View v){
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "¡Hola! te comparto mi niota obtenida hoy: " +
+                pregunta.getText().toString());
+        sendIntent.setType("text/plain");
+        //sendIntent.setPackage("com.whatsapp");
+        //startActivity(sendIntent);
+
+        //setResult(Activity.RESULT_OK,sendIntent);
+        //startActivityForResult(sendIntent, 2);
+
+
+
+    }
+
+
+
+
+
+
+
+
 
 }//class

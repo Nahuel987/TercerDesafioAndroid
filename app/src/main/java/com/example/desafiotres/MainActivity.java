@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         //inicio las vistas
        // iniciarVistas();
         //pregunta.setText("wenaaa");
